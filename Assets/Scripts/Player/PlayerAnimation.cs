@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Player
+namespace FruitAdventure.Player
 {
     public class PlayerAnimation : MonoBehaviour
     {

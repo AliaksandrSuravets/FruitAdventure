@@ -1,14 +1,14 @@
 using System;
 using UnityEngine;
 
-namespace Player
+namespace FruitAdventure.Player
 {
     public class Player : MonoBehaviour
     {
         #region Variables
 
         private const float _powerSlide = 0.1f;
-        private const int _powerWallJump = 5;
+        
         private const float TimeForWaitCanMove = 0.5f;
     
         [Header("Move")]
@@ -21,6 +21,7 @@ namespace Player
         [Header("Wall")]
         [SerializeField] private LayerMask _whatIsWall;
         [SerializeField] private float _wallCheckDistance;
+        [SerializeField] private int _powerWallJump;
         [Header("Animation")]
         [SerializeField] private PlayerAnimation _playerAnimation;
 
@@ -61,7 +62,7 @@ namespace Player
 
         private void CanMove()
         {
-            if (CheckGrounded())
+            if (CheckGrounded() || _movingInput != 0)
             {
                 _canMove = true;
             }
