@@ -27,6 +27,7 @@ namespace FruitAdventure.Traps
         {
             PlayAnim();
             MovingToPoint();
+            
         }
 
         #endregion
@@ -47,11 +48,19 @@ namespace FruitAdventure.Traps
             _isWorking = false;
             yield return new WaitForSeconds(_timeToNewMove);
             _currentPoint++;
-            Flip();
             _isWorking = true;
+            Flip(_currentPoint);
             if (_currentPoint >= _movePoints.Length)
             {
                 _currentPoint = 0;
+            }
+        }
+
+        private void Flip(int value)
+        {
+            if (value == 0 || value >= _movePoints.Length)
+            {
+                transform.localScale = new Vector3(1, transform.localScale.y * -1);
             }
         }
 
@@ -74,11 +83,6 @@ namespace FruitAdventure.Traps
         private void PlayAnim()
         {
             _anim.SetBool(SawOn, _isWorking);
-        }
-
-        private void Flip()
-        {
-            transform.localScale = new Vector3(1, transform.localScale.y * -1);
         }
 
         #endregion
