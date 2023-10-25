@@ -17,6 +17,7 @@ namespace FruitAdventure.Traps
         [SerializeField] private float _timeToNewMove;
 
         private int _currentPoint;
+        private bool _isGoingForward = true;
         private bool _isWorking = true;
 
         #endregion
@@ -27,7 +28,6 @@ namespace FruitAdventure.Traps
         {
             PlayAnim();
             MovingToPoint();
-            
         }
 
         #endregion
@@ -47,12 +47,27 @@ namespace FruitAdventure.Traps
         {
             _isWorking = false;
             yield return new WaitForSeconds(_timeToNewMove);
-            _currentPoint++;
+
+            if (_currentPoint == 0)
+            {
+                _isGoingForward = true;
+            }
+
+            if (_isGoingForward)
+            {
+                _currentPoint++;
+            }
+            else
+            {
+                _currentPoint--;
+            }
+
             _isWorking = true;
             Flip(_currentPoint);
             if (_currentPoint >= _movePoints.Length)
             {
-                _currentPoint = 0;
+                _currentPoint = _movePoints.Length - 1;
+                _isGoingForward = false;
             }
         }
 
