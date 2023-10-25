@@ -14,6 +14,7 @@ namespace FruitAdventure.Player
         [Header("Move")]
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _jumpForce;
+        [SerializeField] private float _doubleJumpForce;
         [SerializeField] private Rigidbody2D _rb;
         [Header("Ground")]
         [SerializeField] private LayerMask _whatIsGround;
@@ -108,6 +109,7 @@ namespace FruitAdventure.Player
                 {
                     _canMove = false;
                     WallJump();
+                    _canDoubleJump = true;
                 }
                 else if (CheckGrounded())
                 {
@@ -117,7 +119,7 @@ namespace FruitAdventure.Player
                 else if (_canDoubleJump)
                 {
                     _canDoubleJump = false;
-                    _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+                    _rb.velocity = new Vector2(_rb.velocity.x, _doubleJumpForce);
                 }
             }
         }
