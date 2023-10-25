@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace FruitAdventure.Trap
+namespace FruitAdventure.Traps
 {
     public class FireTrap : Trap
     {
@@ -11,6 +10,7 @@ namespace FruitAdventure.Trap
 
         [SerializeField] private Animator _anim;
         [SerializeField] private float _cooldown;
+        private bool _inCollider;
         private bool _isWorking;
 
         private float _timeForWorking;
@@ -27,7 +27,16 @@ namespace FruitAdventure.Trap
         private void Update()
         {
             ChangeFireWorkingWithCooldown();
+            ApplyDamage();
             PlayAnim();
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                _inCollider = false;
+            }
         }
 
         #endregion
@@ -36,15 +45,23 @@ namespace FruitAdventure.Trap
 
         protected override void Aplly(Collider2D other)
         {
-            if (other.CompareTag("Player") && _isWorking)
+            if (other.CompareTag("Player"))
             {
-                Debug.Log("DAMAGE FIRE");
+                _inCollider = true;
             }
         }
 
         #endregion
 
         #region Private methods
+
+        private void ApplyDamage()
+        {
+            if (_isWorking && _inCollider)
+            {
+                Debug.Log("DAMAGE");
+            }
+        }
 
         private void ChangeFireWorkingWithCooldown()
         {

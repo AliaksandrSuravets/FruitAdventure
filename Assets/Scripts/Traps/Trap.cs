@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace FruitAdventure.Trap
+namespace FruitAdventure.Traps
 {
     public abstract class Trap : MonoBehaviour
     {
