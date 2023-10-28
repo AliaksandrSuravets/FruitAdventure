@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FruitAdventure.Player
+namespace FruitAdventure.PlayerFolder
 {
     public class PlayerAnimation : MonoBehaviour
     {
@@ -9,6 +9,8 @@ namespace FruitAdventure.Player
         private const string FumpFall = "yVelocity";
         private const string isGrounded = "isGrounded";
         private const string isWallSliding = "isWallSliding";
+        private const string isKnocked = "isKnocked";
+        private const string isBoolKnocked = "isBoolKnocked";
         public void SetWalk(float variable)
         {
             _animator.SetFloat(Walk, variable);
@@ -18,7 +20,12 @@ namespace FruitAdventure.Player
         {
             _animator.SetBool(isGrounded, variable);
         }
-    
+       
+        public void SetIsBoolKnocked(bool variable)
+        {
+            _animator.SetBool(isBoolKnocked, variable);
+        }
+       
         public void SetJumpFall(float variable)
         {
             _animator.SetFloat(FumpFall, variable);
@@ -28,6 +35,12 @@ namespace FruitAdventure.Player
         {
             _animator.SetBool(isWallSliding, variable);
         }
+        
+        public void SetIsKnocked()
+        {
+            _animator.SetTrigger(isKnocked);
+        }
+
     
     }
 }

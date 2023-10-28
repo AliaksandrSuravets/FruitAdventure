@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using FruitAdventure.PlayerFolder;
 using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 
@@ -36,7 +37,14 @@ namespace FruitAdventure.Traps
 
         protected override void Aplly(Collider2D other)
         {
-            if (other.CompareTag("Player")) { }
+            if (other.CompareTag("Player"))
+            {
+                Player player = other.GetComponent<Player>();
+                if (!player.IsKnocked)
+                {
+                    player.KnockBack();
+                }
+            }
         }
 
         #endregion

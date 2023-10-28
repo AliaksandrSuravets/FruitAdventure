@@ -1,16 +1,16 @@
 using System;
 using UnityEngine;
 
-namespace FruitAdventure.Player
+namespace FruitAdventure.PlayerFolder
 {
     public class Player : MonoBehaviour
     {
         #region Variables
 
         private const float _powerSlide = 0.1f;
-        
+
         private const float TimeForWaitCanMove = 0.5f;
-    
+
         [Header("Move")]
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _jumpForce;
@@ -25,14 +25,29 @@ namespace FruitAdventure.Player
         [SerializeField] private int _powerWallJump;
         [Header("Animation")]
         [SerializeField] private PlayerAnimation _playerAnimation;
+        [Header("Jump")]
+        [SerializeField] private float _cayoteJumpTime;
+        [Header("Knockback info")]
+        [SerializeField] private Vector2 _knockbackDirection;
+        [SerializeField] private float _knockbackTime;
 
         private bool _canDoubleJump;
+        private bool _canHaveCayoteJump;
         private bool _canMove = true;
+
+        private float _cayoteJumpCounter;
         //private bool _canWallSlide = true;
         private int _facingDirection = 1;
         private bool _facingRight = true;
+
+        private bool _isKnocked;
         private bool _isWallSliding;
         private float _movingInput;
+
+        public bool IsKnocked
+        {
+            get => _isKnocked;
+        }
 
         #endregion
 
@@ -40,7 +55,13 @@ namespace FruitAdventure.Player
 
         public void Update()
         {
+            if (_isKnocked)
+            {
+                return;
+            }
+
             PlayAnimation();
+            _cayoteJumpCounter -= Time.deltaTime;
             CheckFlip();
             WallSlide();
             Move();
@@ -59,7 +80,26 @@ namespace FruitAdventure.Player
 
         #endregion
 
+        #region Public methods
+
+        public void KnockBack()
+        {
+            _isKnocked = true;
+            _playerAnimation.SetIsKnocked();
+            _playerAnimation.SetIsBoolKnocked(_isKnocked);
+            _rb.velocity = new Vector2(_knockbackDirection.x * -_facingDirection, _knockbackDirection.y);
+            Invoke("CancelKnockback", _knockbackTime);
+        }
+
+        #endregion
+
         #region Private methods
+
+        private void CancelKnockback()
+        {
+            _isKnocked = false;
+            _playerAnimation.SetIsBoolKnocked(_isKnocked);
+        }
 
         private void CanMove()
         {
@@ -103,6 +143,19 @@ namespace FruitAdventure.Player
 
         private void Jump()
         {
+            if (CheckGrounded())
+            {
+                _canHaveCayoteJump = true;
+            }
+            else
+            {
+                if (_canHaveCayoteJump)
+                {
+                    _canHaveCayoteJump = false;
+                    _cayoteJumpCounter = _cayoteJumpTime;
+                }
+            }
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (_isWallSliding)
@@ -111,7 +164,7 @@ namespace FruitAdventure.Player
                     WallJump();
                     _canDoubleJump = true;
                 }
-                else if (CheckGrounded())
+                else if (CheckGrounded() || _cayoteJumpCounter > 0)
                 {
                     _canDoubleJump = true;
                     _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
@@ -119,7 +172,8 @@ namespace FruitAdventure.Player
                 else if (_canDoubleJump)
                 {
                     _canDoubleJump = false;
-                    _rb.velocity = new Vector2(_rb.velocity.x, _doubleJumpForce);
+                    _rb.velocity = new Vector2(_rb.velocity.x, _doubleJumpForce
+                    );
                 }
             }
         }
@@ -136,10 +190,13 @@ namespace FruitAdventure.Player
 
         private void PlayAnimation()
         {
-            _playerAnimation.SetIsGrouded(CheckGrounded());
-            _playerAnimation.SetJumpFall(_rb.velocity.y);
-            _playerAnimation.SetWalk(Math.Abs(_movingInput));
-            _playerAnimation.SetisWallSliding(_isWallSliding);
+            if (!_isKnocked)
+            {
+                _playerAnimation.SetIsGrouded(CheckGrounded());
+                _playerAnimation.SetJumpFall(_rb.velocity.y);
+                _playerAnimation.SetWalk(Math.Abs(_movingInput));
+                _playerAnimation.SetisWallSliding(_isWallSliding);
+            }
         }
 
         private void WallJump()

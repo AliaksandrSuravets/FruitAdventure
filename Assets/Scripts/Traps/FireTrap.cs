@@ -1,3 +1,4 @@
+using FruitAdventure.PlayerFolder;
 using UnityEngine;
 
 namespace FruitAdventure.Traps
@@ -59,7 +60,12 @@ namespace FruitAdventure.Traps
         {
             if (_isWorking && _inCollider)
             {
-                Debug.Log("DAMAGE");
+                _inCollider = false;
+                Player player = FindObjectOfType<Player>();
+                if (!player.IsKnocked)
+                {
+                    player.KnockBack();
+                }
             }
         }
 

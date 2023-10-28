@@ -1,9 +1,9 @@
-using FruitAdventure.PlayerFolder;
+﻿using FruitAdventure.PlayerFolder;
 using UnityEngine;
 
-namespace FruitAdventure.Traps.SpikedBall
+namespace FruitAdventure.Traps
 {
-    public class SpikedBallTrapDamage : Trap
+    public class Spike : Trap
     {
         #region Protected methods
 
