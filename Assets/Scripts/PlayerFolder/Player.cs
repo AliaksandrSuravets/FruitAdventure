@@ -141,6 +141,11 @@ namespace FruitAdventure.PlayerFolder
             transform.Rotate(0, 180, 0);
         }
 
+        public void JumpEnemyHeader()
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+        }
+        
         private void Jump()
         {
             if (CheckGrounded())
