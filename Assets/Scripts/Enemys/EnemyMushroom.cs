@@ -23,6 +23,7 @@ namespace FruitAdventure
 
         private void Update()
         {
+            _animator.SetFloat("Moving", Math.Abs(_rb.velocity.magnitude));
             if (_idleTimeCounter <= 0)
             {
                 _rb.velocity = new Vector2(_speed * _facingDirection, _rb.velocity.y);
@@ -35,11 +36,26 @@ namespace FruitAdventure
             _idleTimeCounter -= Time.deltaTime;
 
             CollisionChecks();
-            if (_wallDetected || !_groundDetected)
+            if (!_wallDetected || _groundDetected)
             {
                 _idleTimeCounter = _idleTime;
                 Flip();
             }
+        }
+
+        #endregion
+
+        #region Public methods
+
+        public override void Damage()
+        {
+            base.Damage();
+            _animator.SetTrigger("Hit");
+        }
+
+        public void DestroyMe()
+        {
+            Destroy(gameObject);
         }
 
         #endregion

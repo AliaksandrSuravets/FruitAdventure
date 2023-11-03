@@ -27,6 +27,8 @@ namespace FruitAdventure.PlayerFolder
             {
                 if (enemy.TryGetComponent(out Enemy enemys))
                 {
+             
+                    
                     if (_rb.velocity.y < 0)
                     {
                         enemys.Damage();

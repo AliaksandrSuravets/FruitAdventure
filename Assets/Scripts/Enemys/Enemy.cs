@@ -9,12 +9,14 @@ namespace FruitAdventure.Enemys
     {
         #region Variables
 
-        [SerializeField] private Animator _animator;
-        [SerializeField] private LayerMask _whatIsGround;
+        
+
+        [SerializeField] private protected Animator _animator;
+        [SerializeField] private protected LayerMask _whatIsGround;
         [SerializeField] private float _groundCheckDistance;
         [SerializeField] private float _wallCheckDistance;
-        [SerializeField] private Transform _startCheckGround;
-        [SerializeField] private Transform _startCheckWall;
+        [SerializeField] private protected Transform _startCheckGround;
+        [SerializeField] private protected Transform _startCheckWall;
 
         private protected int _facingDirection = -1;
         private protected bool _groundDetected;
@@ -54,7 +56,7 @@ namespace FruitAdventure.Enemys
 
         #region Public methods
 
-        public void Damage()
+        public virtual void Damage()
         {
             Debug.Log("DAMAGE ENEMY");
         }
@@ -67,9 +69,9 @@ namespace FruitAdventure.Enemys
         {
             Vector2 positionWall = _startCheckWall.position;
             Vector2 positionGround = _startCheckGround.position;
-            _groundDetected = Physics2D.Raycast(positionWall, Vector2.down, _groundCheckDistance,
+            _wallDetected = Physics2D.Raycast(positionWall, Vector2.down, _groundCheckDistance,
                 _whatIsGround);
-            _wallDetected = Physics2D.Raycast(positionGround, Vector2.right * _facingDirection,
+            _groundDetected= Physics2D.Raycast(positionGround, Vector2.right * _facingDirection,
                 _wallCheckDistance,
                 _whatIsGround);
         }
