@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 502968683628458272}
   - component: {fileID: 7391174468230904375}
   m_Layer: 0
-  m_Name: Trap_Spiked_Ball
+  m_Name: TrapSpikedBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

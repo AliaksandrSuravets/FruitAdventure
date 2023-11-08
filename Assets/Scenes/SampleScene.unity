@@ -14922,7 +14922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5774482577304260270, guid: 0e76728491e4dcc4394a05d186517bf4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15243,6 +15243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap_Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 704843659764484512, guid: 906b545cab5cedd46bd97ad84bf6b6e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4761879425093629967, guid: 906b545cab5cedd46bd97ad84bf6b6e0, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -15292,6 +15296,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 906b545cab5cedd46bd97ad84bf6b6e0, type: 3}
+--- !u!1001 &3263689458167271887
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 875770323808225105, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107038829640230053, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
+      propertyPath: m_Name
+      value: EnemyRadish
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1968b7bf24a937b4cbff0357d3be8f9f, type: 3}
 --- !u!1001 &4238149912852904544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15303,6 +15368,10 @@ PrefabInstance:
     - target: {fileID: 5166612762224399580, guid: c38c3e4c40497f64ab40f859cad7fba3, type: 3}
       propertyPath: m_Name
       value: Trap_Spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166612762224399580, guid: c38c3e4c40497f64ab40f859cad7fba3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6955168299652329655, guid: c38c3e4c40497f64ab40f859cad7fba3, type: 3}
       propertyPath: m_RootOrder
@@ -15459,6 +15528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap_Spiked_Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 4154663185329275424, guid: a06837c92d782494a89ad892cbaac56e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7898634113505016405, guid: a06837c92d782494a89ad892cbaac56e, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -15563,6 +15636,10 @@ PrefabInstance:
     - target: {fileID: 7134437420455060635, guid: 9a7930f0070979045b53562ca66957ac, type: 3}
       propertyPath: m_Name
       value: Enemy_Rino
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134437420455060635, guid: 9a7930f0070979045b53562ca66957ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 7684407937463546224}
   - component: {fileID: 2836589912083810084}
   m_Layer: 8
-  m_Name: Enemy_Rino
+  m_Name: EnemyRino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -24,7 +24,7 @@ namespace FruitAdventure
         private void Update()
         {
             _animator.SetFloat("Moving", Math.Abs(_rb.velocity.magnitude));
-            if (_idleTimeCounter <= 0)
+            if (_idleTimeCounter <= 0 && CanMove)
             {
                 _rb.velocity = new Vector2(_speed * _facingDirection, _rb.velocity.y);
             }
@@ -50,6 +50,7 @@ namespace FruitAdventure
         public override void Damage()
         {
             base.Damage();
+            CanMove = false;
             _animator.SetTrigger("Hit");
         }
 
