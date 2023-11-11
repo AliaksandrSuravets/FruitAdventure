@@ -1,13 +1,12 @@
-using System;
 using UnityEngine;
 
 namespace FruitAdventure.Enemys
 {
-    public class EnemyMushroom : Enemy
+    public class EnemyGhost : Enemy
     {
         #region Variables
 
-        [Header("EnemyMushroom")]
+        [Header("EnemyGhost")]
         [SerializeField] private float _speed;
         [SerializeField] private float _idleTime = 2f;
         [SerializeField] private Rigidbody2D _rb;
@@ -20,7 +19,6 @@ namespace FruitAdventure.Enemys
 
         private void Update()
         {
-            _animator.SetFloat("Moving", Math.Abs(_rb.velocity.magnitude));
             if (_idleTimeCounter <= 0 && CanMove)
             {
                 _rb.velocity = new Vector2(_speed * _facingDirection, _rb.velocity.y);

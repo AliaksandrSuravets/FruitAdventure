@@ -1,11 +1,7 @@
-using System;
 using System.Collections;
-using FruitAdventure.Enemys;
-using FruitAdventure.PlayerFolder;
-using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 
-namespace FruitAdventure
+namespace FruitAdventure.Enemys
 {
     public class BlueBird : Enemy
     {

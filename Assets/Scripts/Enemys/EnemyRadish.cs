@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using FruitAdventure.Enemys;
 using UnityEngine;
 
-namespace FruitAdventure
+namespace FruitAdventure.Enemys
 {
     public class EnemyRadish : Enemy
     {

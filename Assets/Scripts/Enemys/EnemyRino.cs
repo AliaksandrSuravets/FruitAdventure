@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using FruitAdventure.Enemys;
 using FruitAdventure.PlayerFolder;
 using UnityEngine;
 
-namespace FruitAdventure
+namespace FruitAdventure.Enemys
 {
     public class EnemyRino : Enemy
     {
