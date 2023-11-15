@@ -9,8 +9,6 @@ namespace FruitAdventure.Enemys
 
         [Header("EnemyBlueBird")]
         [SerializeField] private float _speed;
-        [SerializeField] private float _idleTime = 2f;
-        [SerializeField] private Rigidbody2D _rb;
 
         [SerializeField] private Transform[] _movePoints;
         [SerializeField] private float _timeToNewMove;
@@ -71,14 +69,14 @@ namespace FruitAdventure.Enemys
             }
 
             _isWorking = true;
-            
+
             if (_currentPoint >= _movePoints.Length)
             {
                 _currentPoint = _movePoints.Length - 1;
                 _isGoingForward = false;
             }
         }
-        
+
         private void MovingToPoint()
         {
             if (!_isWorking || !CanMove)
