@@ -1,5 +1,6 @@
 using System;
 using FruitAdventure.PlayerFolder;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FruitAdventure.Enemys
@@ -8,13 +9,12 @@ namespace FruitAdventure.Enemys
     {
         #region Variables
 
-        [Header("EnemyRino")]
-        [SerializeField] private float _speed;
-        [SerializeField] private float _sppedAggresiv;
-        [SerializeField] private float _idleTime = 2f;
-        [SerializeField] private float _shockTime;
-        [SerializeField] private Rigidbody2D _rb;
-        [SerializeField] private LayerMask _whatToIgnore;
+        [SerializeField] [BoxGroup("Rino")] private float _speed;
+        [SerializeField] [BoxGroup("Rino")] private float _sppedAggresiv;
+        [SerializeField] [BoxGroup("Rino")] private float _idleTime = 2f;
+        [SerializeField] [BoxGroup("Rino")] private float _shockTime;
+        [SerializeField] [BoxGroup("Rino")] private Rigidbody2D _rb;
+        [SerializeField] [BoxGroup("Rino")] private LayerMask _whatToIgnore;
 
         private float _idleTimeCounter;
         private bool _invincible;
