@@ -21,7 +21,7 @@ namespace FruitAdventure.Enemys
 
         private void Update()
         {
-            _rb.velocity = new Vector2(_xSpeed * _speed, _ySpeed);
+            _rb.velocity = new Vector2(_xSpeed * _speed, _ySpeed * _speed);
         }
 
         #endregion
