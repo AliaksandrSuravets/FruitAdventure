@@ -1,3 +1,4 @@
+using FruitAdventure.PlayerFolder;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -34,7 +35,7 @@ namespace FruitAdventure.Enemys
 
         private void Start()
         {
-            _player = GameObject.Find("Player").transform;
+            _player = PlayerManager.Instance.CurrentPlayer.transform;
             _defaultSpeed = _speed;
             _destination = _idlePoint[0].position;
             transform.position = _idlePoint[0].position;

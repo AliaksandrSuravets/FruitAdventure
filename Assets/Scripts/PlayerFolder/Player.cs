@@ -1,4 +1,5 @@
 using System;
+using FruitAdventure.Camera;
 using UnityEngine;
 
 namespace FruitAdventure.PlayerFolder
@@ -30,7 +31,8 @@ namespace FruitAdventure.PlayerFolder
         [Header("Knockback info")]
         [SerializeField] private Vector2 _knockbackDirection;
         [SerializeField] private float _knockbackTime;
-
+        [SerializeField] private CameraShakeFX _cameraShakeFX;
+        
         private bool _canDoubleJump;
         private bool _canHaveCayoteJump;
         private bool _canMove = true;
@@ -85,6 +87,7 @@ namespace FruitAdventure.PlayerFolder
         public void KnockBack()
         {
             _isKnocked = true;
+            _cameraShakeFX.ScreenShake(-_facingDirection);
             _playerAnimation.SetIsKnocked();
             _playerAnimation.SetIsBoolKnocked(_isKnocked);
             _rb.velocity = new Vector2(_knockbackDirection.x * -_facingDirection, _knockbackDirection.y);
