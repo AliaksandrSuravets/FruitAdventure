@@ -32,7 +32,7 @@ namespace FruitAdventure.PlayerFolder
         [SerializeField] private Vector2 _knockbackDirection;
         [SerializeField] private float _knockbackTime;
         [SerializeField] private CameraShakeFX _cameraShakeFX;
-        
+
         private bool _canDoubleJump;
         private bool _canHaveCayoteJump;
         private bool _canMove = true;
@@ -46,10 +46,11 @@ namespace FruitAdventure.PlayerFolder
         private bool _isWallSliding;
         private float _movingInput;
 
-        public bool IsKnocked
-        {
-            get => _isKnocked;
-        }
+        #endregion
+
+        #region Properties
+
+        public bool IsKnocked => _isKnocked;
 
         #endregion
 
@@ -84,6 +85,11 @@ namespace FruitAdventure.PlayerFolder
 
         #region Public methods
 
+        public void JumpEnemyHeader()
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+        }
+
         public void KnockBack()
         {
             _isKnocked = true;
@@ -92,6 +98,11 @@ namespace FruitAdventure.PlayerFolder
             _playerAnimation.SetIsBoolKnocked(_isKnocked);
             _rb.velocity = new Vector2(_knockbackDirection.x * -_facingDirection, _knockbackDirection.y);
             Invoke("CancelKnockback", _knockbackTime);
+        }
+
+        public void Push(float pushForce)
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, pushForce);
         }
 
         #endregion
@@ -144,11 +155,6 @@ namespace FruitAdventure.PlayerFolder
             transform.Rotate(0, 180, 0);
         }
 
-        public void JumpEnemyHeader()
-        {
-            _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
-        }
-        
         private void Jump()
         {
             if (CheckGrounded())

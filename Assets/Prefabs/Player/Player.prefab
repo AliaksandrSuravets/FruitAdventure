@@ -122,11 +122,11 @@ MonoBehaviour:
   _rb: {fileID: 8965943676788201678}
   _whatIsGround:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 1216
   _groundCheckDistance: 0.9
   _whatIsWall:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 128
   _wallCheckDistance: 0.6
   _powerWallJump: 4
   _playerAnimation: {fileID: 3758622026264707083}
