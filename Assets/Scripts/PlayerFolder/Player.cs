@@ -1,5 +1,6 @@
 using System;
 using FruitAdventure.Camera;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FruitAdventure.PlayerFolder

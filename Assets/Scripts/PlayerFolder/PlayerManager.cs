@@ -32,6 +32,13 @@ namespace FruitAdventure.PlayerFolder
 
         #region Public methods
 
+        public void MoveToCheckPoint()
+        {
+            CurrentPlayer.enabled = false;
+            CurrentPlayer.transform.position = _respawnPoint.position;
+            CurrentPlayer.enabled = true;
+        }
+
         public void RespawnPlayer()
         {
             if (CurrentPlayer == null)
