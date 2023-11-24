@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,9 +22,10 @@ namespace FruitAdventure.Services
             for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
             {
                 string sceneName = "Level" + i;
-
+                string sceneNameText = "Level " + i;
                 GameObject newButton = Instantiate(_levelButton, _levelButtonParent);
                 newButton.AddComponent<Button>().onClick.AddListener(() => LoadLevel(sceneName));
+                newButton.GetComponentInChildren<TextMeshProUGUI>().text = sceneNameText;
             }
         }
 
