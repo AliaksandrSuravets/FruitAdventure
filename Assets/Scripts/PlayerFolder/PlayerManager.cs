@@ -12,7 +12,8 @@ namespace FruitAdventure.PlayerFolder
 
         [SerializeField] private Player _playerPrefab;
         [SerializeField] private Transform _respawnPoint;
-
+        public int ChoosenSkinID;
+        
         #endregion
 
         #region Properties
