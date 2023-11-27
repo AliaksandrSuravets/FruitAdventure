@@ -9,24 +9,39 @@ namespace FruitAdventure.PlayerFolder
         #region Variables
 
         public static PlayerManager Instance;
+        
 
         [SerializeField] private Player _playerPrefab;
         [SerializeField] private Transform _respawnPoint;
-        public int ChoosenSkinID;
-        
+
         #endregion
 
         #region Properties
 
         public Player CurrentPlayer { get; private set; }
+        public int ChoosenSkinID { get; private set; }
 
+        public void SetSkinId(int Value)
+        {
+            ChoosenSkinID = Value;
+        }
+        
         #endregion
 
         #region Unity lifecycle
 
         private void Awake()
         {
-            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
         #endregion

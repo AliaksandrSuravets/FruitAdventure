@@ -45,7 +45,7 @@ namespace FruitAdventure.UI
 
         public void Equip()
         {
-            PlayerManager.Instance.ChoosenSkinID = _skinId;
+            PlayerManager.Instance.SetSkinId(_skinId);
         }
 
         public void NextSkin()

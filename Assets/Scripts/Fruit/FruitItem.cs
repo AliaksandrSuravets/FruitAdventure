@@ -1,4 +1,5 @@
 using FruitAdventure.PlayerFolder;
+using FruitAdventure.Services;
 using UnityEngine;
 
 namespace FruitAdventure.Fruit
@@ -17,6 +18,7 @@ namespace FruitAdventure.Fruit
         {
             if (other.gameObject.TryGetComponent(out Player player))
             {
+                GameService.Instance.ChangeScore(_score);
                 Destroy(gameObject);
             }
         }
