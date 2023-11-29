@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FruitAdventure.Services;
+using UnityEngine;
 
 namespace FruitAdventure.Respawn
 {
@@ -19,7 +20,8 @@ namespace FruitAdventure.Respawn
             {
                 return;
             }
-
+            GameService.Instance.SaveBestTime();
+            GameService.Instance.SaveLevelInfo();
             _animator.SetTrigger(Active);
         }
 

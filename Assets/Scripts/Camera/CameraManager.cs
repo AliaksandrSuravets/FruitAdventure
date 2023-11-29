@@ -19,7 +19,6 @@ namespace FruitAdventure.Camera
 
         private void Start()
         {
-
             _myCamera.GetComponent<CinemachineVirtualCamera>().Follow = PlayerManager.Instance.CurrentPlayer.transform;
         }
 
