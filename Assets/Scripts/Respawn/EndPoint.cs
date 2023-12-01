@@ -1,4 +1,5 @@
 ﻿using FruitAdventure.Services;
+using FruitAdventure.UI;
 using UnityEngine;
 
 namespace FruitAdventure.Respawn
@@ -9,7 +10,8 @@ namespace FruitAdventure.Respawn
 
         private static readonly int Active = Animator.StringToHash("Active");
         [SerializeField] private Animator _animator;
-
+        [SerializeField] private GameScreenUi _gameScreenUi;
+        
         #endregion
 
         #region Unity lifecycle
@@ -20,9 +22,12 @@ namespace FruitAdventure.Respawn
             {
                 return;
             }
+            
+            Destroy(other.gameObject);
             GameService.Instance.SaveBestTime();
             GameService.Instance.SaveLevelInfo();
             _animator.SetTrigger(Active);
+            _gameScreenUi.OnLevelFinished();
         }
 
         #endregion
