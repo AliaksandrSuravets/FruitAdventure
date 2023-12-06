@@ -57,6 +57,11 @@ namespace FruitAdventure.PlayerFolder
 
         #region Unity lifecycle
 
+        private void Start()
+        {
+            _playerAnimation.ChangeAnimSkin(PlayerManager.Instance.ChoosenSkinID);
+        }
+
         public void Update()
         {
             if (_isKnocked)

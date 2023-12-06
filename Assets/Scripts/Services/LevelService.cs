@@ -26,15 +26,18 @@ namespace FruitAdventure.Services
             for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
             {
                 string sceneName = "Level" + i;
-                string sceneNameText = "Level " + i;
+                string sceneNameText = "Уровень " + i;
                 GameObject newButton = Instantiate(_levelButton, _levelButtonParent);
                 newButton.GetComponent<Button>().onClick.AddListener(() => LoadLevel(sceneName));
                 newButton.GetComponentInChildren<TextMeshProUGUI>().text = sceneNameText;
-
+                newButton.GetComponent<ButtonLevel>().SetBestTimeText(i);
+                
                 if (!_levelOpen[i])
                 {
                     newButton.GetComponent<Button>().enabled = false;
                 }
+                
+                
             }
         }
 

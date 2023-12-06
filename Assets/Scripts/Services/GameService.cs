@@ -84,11 +84,12 @@ namespace FruitAdventure.Services
             IsStartTime = false;
             float lastTime = PlayerPrefs.GetFloat("Level" + LevelNumber + "BestTime");
 
-            if (Timer < lastTime)
+            if (Timer < lastTime || lastTime == 0)
             {
                 PlayerPrefs.SetFloat("Level" + LevelNumber + "BestTime", Timer);
             }
 
+            Debug.Log($"sdfsdf Лучшее время: {Timer}  for {LevelNumber} lastTime {lastTime}");
             Timer = 0;
         }
 

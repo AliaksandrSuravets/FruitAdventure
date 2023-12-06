@@ -11,6 +11,19 @@ namespace FruitAdventure.PlayerFolder
         private const string isWallSliding = "isWallSliding";
         private const string isKnocked = "isKnocked";
         private const string isBoolKnocked = "isBoolKnocked";
+
+        public void ChangeAnimSkin(int skinIndex)
+        {
+            
+            for (int i = 0; i < _animator.layerCount; i++)
+            {
+                _animator.SetLayerWeight(i,0);
+            }
+            
+            _animator.SetLayerWeight(skinIndex,1);
+        }
+        
+        
         public void SetWalk(float variable)
         {
             _animator.SetFloat(Walk, variable);
