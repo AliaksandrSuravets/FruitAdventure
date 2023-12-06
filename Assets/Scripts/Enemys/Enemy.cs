@@ -9,18 +9,18 @@ namespace FruitAdventure.Enemys
     {
         #region Variables
 
-        [SerializeField] private protected Animator _animator;
-        [SerializeField] private protected LayerMask _whatIsGround;
+        [SerializeField] protected Animator _animator;
+        [SerializeField] protected LayerMask _whatIsGround;
         [SerializeField] private float _groundCheckDistance;
         [SerializeField] private float _wallCheckDistance;
-        [SerializeField] private protected Transform _startCheckGround;
-        [SerializeField] private protected Transform _startCheckWall;
+        [SerializeField] protected Transform _startCheckGround;
+        [SerializeField] protected Transform _startCheckWall;
+
+        protected int _facingDirection = -1;
+        protected bool _groundDetected;
+        protected bool _wallDetected;
 
         protected bool CanMove = true;
-
-        private protected int _facingDirection = -1;
-        private protected bool _groundDetected;
-        private protected bool _wallDetected;
 
         #endregion
 

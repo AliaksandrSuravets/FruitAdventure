@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Scripting;
 
 namespace FruitAdventure.Enemys
 {
@@ -39,6 +40,7 @@ namespace FruitAdventure.Enemys
             _animator.SetTrigger("Hit");
         }
 
+        [Preserve]
         public void DestroyMe()
         {
             Destroy(gameObject);
