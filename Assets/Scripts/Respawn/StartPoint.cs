@@ -10,6 +10,7 @@ namespace FruitAdventure.Respawn
     {
         private void Start()
         {
+            AudioService.Instance.PlayRandomBGM();
             GameService.Instance.ChangeLevelNumber(SceneManager.GetActiveScene().buildIndex);
             PlayerManager.Instance.SetRespawnPoint(transform);
             PlayerManager.Instance.RespawnPlayer();

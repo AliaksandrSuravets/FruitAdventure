@@ -50,11 +50,13 @@ namespace FruitAdventure.UI
         {
             if (EnoughMoney())
             {
+                AudioService.Instance.PlaySFX(5);
                 GameService.Instance.ChangeScore(-_priceForSkin[_skinId]);
                 PlayerPrefs.SetInt($"SkinPurchased{_skinId}", 1);
                 _skinPurchased[_skinId] = true;
                 SetUpSkinInfo();
             }
+            AudioService.Instance.PlaySFX(6);
         }
 
         public void Equip()
@@ -64,6 +66,7 @@ namespace FruitAdventure.UI
 
         public void NextSkin()
         {
+            AudioService.Instance.PlaySFX(4);
             _skinId++;
             if (_skinId > 3)
             {
@@ -75,6 +78,7 @@ namespace FruitAdventure.UI
 
         public void PreviousSkin()
         {
+            AudioService.Instance.PlaySFX(4);
             _skinId--;
             if (_skinId < 0)
             {

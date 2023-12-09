@@ -1,4 +1,5 @@
 using System;
+using FruitAdventure.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -47,6 +48,7 @@ namespace FruitAdventure.Services
 
         public void LoadLevel(string sceneName)
         {
+            AudioService.Instance.PlaySFX(4);
             SceneManager.LoadScene(sceneName);
         }
 
@@ -56,6 +58,7 @@ namespace FruitAdventure.Services
 
         private void LoadNewGame()
         {
+            AudioService.Instance.PlaySFX(4);
             for (int i = 2; i < SceneManager.sceneCountInBuildSettings; i++)
             {
                 bool isUnlocked = PlayerPrefs.GetInt($"Level{i}Unlocked") == 1;

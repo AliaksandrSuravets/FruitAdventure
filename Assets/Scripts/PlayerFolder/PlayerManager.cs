@@ -1,4 +1,5 @@
 using System;
+using FruitAdventure.Services;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -50,6 +51,7 @@ namespace FruitAdventure.PlayerFolder
 
         public void MoveToCheckPoint()
         {
+            AudioService.Instance.PlaySFX(0);
             CurrentPlayer.enabled = false;
             CurrentPlayer.transform.position = _respawnPoint.position;
             CurrentPlayer.enabled = true;
@@ -59,6 +61,7 @@ namespace FruitAdventure.PlayerFolder
         {
             if (CurrentPlayer == null)
             {
+                AudioService.Instance.PlaySFX(11);
                 CurrentPlayer = Instantiate(_playerPrefab, _respawnPoint.position, Quaternion.identity);
             }
         }

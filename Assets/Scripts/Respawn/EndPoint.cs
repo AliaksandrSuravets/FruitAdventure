@@ -22,6 +22,7 @@ namespace FruitAdventure.Respawn
             {
                 return;
             }
+            AudioService.Instance.PlaySFX(2);
             
             Destroy(other.gameObject);
             GameService.Instance.SaveBestTime();

@@ -18,6 +18,7 @@ namespace FruitAdventure.Fruit
         {
             if (other.gameObject.TryGetComponent(out Player player))
             {
+                AudioService.Instance.PlaySFX(7);
                 GameService.Instance.ChangeScore(_score);
                 Destroy(gameObject);
             }

@@ -1,5 +1,6 @@
 using System;
 using FruitAdventure.Camera;
+using FruitAdventure.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -93,11 +94,13 @@ namespace FruitAdventure.PlayerFolder
 
         public void JumpEnemyHeader()
         {
+            AudioService.Instance.PlaySFX(1);
             _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
         }
 
         public void KnockBack()
         {
+            AudioService.Instance.PlaySFX(9);
             _isKnocked = true;
             _cameraShakeFX.ScreenShake(-_facingDirection);
             _playerAnimation.SetIsKnocked();
@@ -180,17 +183,20 @@ namespace FruitAdventure.PlayerFolder
             {
                 if (_isWallSliding)
                 {
+                    AudioService.Instance.PlaySFX(12);
                     _canMove = false;
                     WallJump();
                     _canDoubleJump = true;
                 }
                 else if (CheckGrounded() || _cayoteJumpCounter > 0)
                 {
+                    AudioService.Instance.PlaySFX(3);
                     _canDoubleJump = true;
                     _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
                 }
                 else if (_canDoubleJump)
                 {
+                    AudioService.Instance.PlaySFX(3);
                     _canDoubleJump = false;
                     _rb.velocity = new Vector2(_rb.velocity.x, _doubleJumpForce
                     );
