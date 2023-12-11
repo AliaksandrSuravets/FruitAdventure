@@ -1,4 +1,3 @@
-using System;
 using FruitAdventure.Enemys;
 using UnityEngine;
 

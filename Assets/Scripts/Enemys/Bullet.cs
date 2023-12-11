@@ -1,4 +1,3 @@
-using System;
 using FruitAdventure.PlayerFolder;
 using FruitAdventure.Traps;
 using UnityEngine;

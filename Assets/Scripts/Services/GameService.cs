@@ -46,7 +46,6 @@ namespace FruitAdventure.Services
         private void Start()
         {
             Score = PlayerPrefs.GetInt("Score");
-            Debug.Log($"{PlayerPrefs.GetFloat("Level" + LevelNumber + "BestTime")}");
         }
 
         private void Update()

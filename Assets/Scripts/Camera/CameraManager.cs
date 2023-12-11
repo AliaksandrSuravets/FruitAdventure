@@ -1,7 +1,6 @@
-using System;
+using Cinemachine;
 using FruitAdventure.PlayerFolder;
 using UnityEngine;
-using Cinemachine;
 
 namespace FruitAdventure.Camera
 {

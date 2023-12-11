@@ -1,4 +1,3 @@
-using System;
 using FruitAdventure.UI;
 using TMPro;
 using UnityEngine;
@@ -32,13 +31,11 @@ namespace FruitAdventure.Services
                 newButton.GetComponent<Button>().onClick.AddListener(() => LoadLevel(sceneName));
                 newButton.GetComponentInChildren<TextMeshProUGUI>().text = sceneNameText;
                 newButton.GetComponent<ButtonLevel>().SetBestTimeText(i);
-                
+
                 if (!_levelOpen[i])
                 {
                     newButton.GetComponent<Button>().enabled = false;
                 }
-                
-                
             }
         }
 

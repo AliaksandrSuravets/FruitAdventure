@@ -1,6 +1,4 @@
-using System;
 using FruitAdventure.PlayerFolder;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace FruitAdventure.Enemys

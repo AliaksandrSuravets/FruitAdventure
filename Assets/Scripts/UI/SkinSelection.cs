@@ -1,10 +1,7 @@
-using System;
 using FruitAdventure.PlayerFolder;
 using FruitAdventure.Services;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace FruitAdventure.UI
 {
@@ -56,6 +53,7 @@ namespace FruitAdventure.UI
                 _skinPurchased[_skinId] = true;
                 SetUpSkinInfo();
             }
+
             AudioService.Instance.PlaySFX(6);
         }
 

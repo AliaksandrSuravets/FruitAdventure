@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using FruitAdventure.PlayerFolder;
-using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 
 namespace FruitAdventure.Traps

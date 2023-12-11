@@ -9,7 +9,7 @@ namespace FruitAdventure.Camera
 
         [SerializeField] private CinemachineImpulseSource _impulse;
         [SerializeField] private Vector3 _shakeDirection;
-        
+
         #endregion
 
         #region Public methods

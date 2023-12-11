@@ -1,7 +1,5 @@
-using System;
 using FruitAdventure.Services;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace FruitAdventure.PlayerFolder
 {
@@ -10,7 +8,6 @@ namespace FruitAdventure.PlayerFolder
         #region Variables
 
         public static PlayerManager Instance;
-        
 
         [SerializeField] private Player _playerPrefab;
         [SerializeField] private Transform _respawnPoint;
@@ -19,14 +16,10 @@ namespace FruitAdventure.PlayerFolder
 
         #region Properties
 
-        public Player CurrentPlayer { get; private set; }
         public int ChoosenSkinID { get; private set; }
 
-        public void SetSkinId(int Value)
-        {
-            ChoosenSkinID = Value;
-        }
-        
+        public Player CurrentPlayer { get; private set; }
+
         #endregion
 
         #region Unity lifecycle
@@ -69,6 +62,11 @@ namespace FruitAdventure.PlayerFolder
         public void SetRespawnPoint(Transform point)
         {
             _respawnPoint = point;
+        }
+
+        public void SetSkinId(int Value)
+        {
+            ChoosenSkinID = Value;
         }
 
         #endregion
