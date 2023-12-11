@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4153157927888691362}
   - component: {fileID: 6630642277389986286}
   - component: {fileID: 6913025787776887777}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CM vcam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7.83
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4356339355343360391}
   - component: {fileID: 8667157735796825789}
   - component: {fileID: 8735496563828524191}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,9 +226,9 @@ GameObject:
   - component: {fileID: 7213815532466085563}
   - component: {fileID: 7892643523463299774}
   - component: {fileID: 1645640037509665992}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoomCamera
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,10 +293,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 18, y: 12}
-      - {x: -8, y: 12}
+    - - {x: 44.1051, y: 7.484494}
+      - {x: -8, y: 7.4314346}
       - {x: -8, y: -7}
-      - {x: 18, y: -7}
+      - {x: 44.105103, y: -6.9469404}
   m_UseDelaunayMesh: 0
 --- !u!114 &1645640037509665992
 MonoBehaviour:
@@ -312,4 +312,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _myCamera: {fileID: 720304204686191555}
   _cd: {fileID: 7892643523463299774}
-  _corlorGizmo: {r: 1, g: 0.7614721, b: 0.033018887, a: 1}
+  _corlorGizmo: {r: 1, g: 0.75303644, b: 0, a: 1}

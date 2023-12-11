@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Scripting;
 
 namespace FruitAdventure.Enemys
 {
@@ -40,11 +41,13 @@ namespace FruitAdventure.Enemys
 
         #region Public methods
 
+        [Preserve]
         public void CreateBullet()
         {
             Bullet newBullet = Instantiate(_bullet, _startBulletPosition.transform.position,
                 _startBulletPosition.transform.rotation);
             newBullet.SetUpSpeed(_facingDirection, 0);
+            Debug.Log("ATTACK");
         }
 
         public override void Damage()

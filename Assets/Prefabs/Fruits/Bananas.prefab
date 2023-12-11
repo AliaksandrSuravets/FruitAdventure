@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5985072416672977701}
   - component: {fileID: 4727306213207057945}
   - component: {fileID: 6759624580390140785}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Bananas
-  m_TagString: Untagged
+  m_TagString: Fruits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6752020785525359488}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.795, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

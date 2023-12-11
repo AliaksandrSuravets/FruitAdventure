@@ -18,7 +18,6 @@ namespace FruitAdventure.UI
         {
             float bestTime = PlayerPrefs.GetFloat("Level" + _levelIndex + "BestTime");
             _bestTime.text = $"Лучшее время: {bestTime:00}";
-            Debug.Log($"Лучшее время: {bestTime:00}  for {_levelIndex}");
         }
 
         #endregion
