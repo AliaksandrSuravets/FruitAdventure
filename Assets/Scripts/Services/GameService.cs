@@ -73,7 +73,6 @@ namespace FruitAdventure.Services
         public void ChangeScore(int value)
         {
             Score += value;
-            Debug.Log(Score);
             OnChangeScore?.Invoke();
             SaveScore();
         }
@@ -88,7 +87,6 @@ namespace FruitAdventure.Services
                 PlayerPrefs.SetFloat("Level" + LevelNumber + "BestTime", Timer);
             }
 
-            Debug.Log($"sdfsdf Лучшее время: {Timer}  for {LevelNumber} lastTime {lastTime}");
             Timer = 0;
         }
 

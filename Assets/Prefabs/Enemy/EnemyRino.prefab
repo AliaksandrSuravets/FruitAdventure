@@ -98,7 +98,7 @@ Transform:
   - {fileID: 1925866422842593445}
   - {fileID: 1730714536751789746}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1555899181245198978
 MonoBehaviour:
@@ -127,7 +127,7 @@ MonoBehaviour:
   _rb: {fileID: 7684407937463546224}
   _whatToIgnore:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 640
 --- !u!212 &6662518443309430874
 SpriteRenderer:
   m_ObjectHideFlags: 0

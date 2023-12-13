@@ -64,7 +64,7 @@ Transform:
   - {fileID: 6749298015152075519}
   - {fileID: 9085112379991709688}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5330735542789961204
 GameObject:
@@ -90,7 +90,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5330735542789961204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.24, y: 0.5, z: 0}
+  m_LocalPosition: {x: 4.53, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,7 +121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6056643842013933433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.51, y: 0.53, z: 0}
+  m_LocalPosition: {x: -5.22, y: 0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -186,8 +186,6 @@ MonoBehaviour:
   _startCheckGround: {fileID: 3867763481066233570}
   _startCheckWall: {fileID: 3573273431362492097}
   _speed: 4
-  _idleTime: 2
-  _rb: {fileID: 0}
   _movePoints:
   - {fileID: 631203157429178759}
   - {fileID: 4117155259376927951}
@@ -295,7 +293,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.044654965, y: -0.014884949}

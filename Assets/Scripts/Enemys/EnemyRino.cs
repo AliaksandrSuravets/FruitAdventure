@@ -37,9 +37,8 @@ namespace FruitAdventure.Enemys
             _animator.SetFloat("Moving", Math.Abs(_rb.velocity.magnitude));
 
             Vector2 position = _startCheckGround.position;
-            _playerDetected = Physics2D.Raycast(position, Vector2.right * _facingDirection, 20,
-                ~_whatToIgnore);
-
+            _playerDetected = Physics2D.Raycast(position, Vector2.right * _facingDirection, 50, _whatToIgnore);
+          
             if (_playerDetected.collider.GetComponent<Player>() != null)
             {
                 _isAggresive = true;

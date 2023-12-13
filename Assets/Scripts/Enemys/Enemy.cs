@@ -56,7 +56,7 @@ namespace FruitAdventure.Enemys
 
         public virtual void Damage()
         {
-            Debug.Log("DAMAGE ENEMY");
+            
         }
 
         #endregion
