@@ -47,7 +47,7 @@ namespace FruitAdventure.Enemys
             Bullet newBullet = Instantiate(_bullet, _startBulletPosition.transform.position,
                 _startBulletPosition.transform.rotation);
             newBullet.SetUpSpeed(_facingDirection, 0);
-            Debug.Log("ATTACK");
+         
         }
 
         public override void Damage()
