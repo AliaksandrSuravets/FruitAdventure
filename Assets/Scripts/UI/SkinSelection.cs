@@ -30,6 +30,7 @@ namespace FruitAdventure.UI
         private void Start()
         {
             _skinPurchased[0] = true;
+          
             GameService.Instance.OnChangeScore += OnChangeScore;
             _bankText.text = $"Фруктов: {GameService.Instance.Score}";
         }
@@ -113,7 +114,7 @@ namespace FruitAdventure.UI
             _equipButton.SetActive(_skinPurchased[_skinId]);
             if (!_skinPurchased[_skinId])
             {
-                _textPrice.text = $"Price : {_priceForSkin[_skinId]}";
+                _textPrice.text = $"Цена : {_priceForSkin[_skinId]}";
             }
 
             _animator.SetInteger(SkinId, _skinId);
