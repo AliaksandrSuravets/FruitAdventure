@@ -107,9 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7698657239471158616}
   - component: {fileID: 7874132499887962556}
-  - component: {fileID: 8253344754854898581}
   - component: {fileID: 2745228401049211093}
-  - component: {fileID: 4813280980216409502}
   m_Layer: 10
   m_Name: PlatformIron
   m_TagString: Untagged
@@ -131,7 +129,7 @@ Transform:
   m_Children:
   - {fileID: 584800300938590302}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7874132499887962556
 SpriteRenderer:
@@ -185,18 +183,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8253344754854898581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7636886367227739161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4723def116204dd428fb30f05c55f600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2745228401049211093
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -242,22 +228,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8486049, y: 0.35397586}
   m_EdgeRadius: 0
---- !u!114 &4813280980216409502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7636886367227739161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12f06373cfc4de6acb759e865ad85f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _startPoint: {x: 0, y: 0, z: 0}
-  _endPoint: {x: 0, y: 0, z: 0}
-  _moveDuration: 3
-  _moveDelay: 1
-  _isLoop: 1
-  _isFastMoveToStart: 0
-  _needToComeBack: 1

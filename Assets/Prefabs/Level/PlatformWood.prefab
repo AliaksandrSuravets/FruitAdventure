@@ -107,9 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150408425437541265}
   - component: {fileID: 7349208843205512014}
-  - component: {fileID: 1171324646075119784}
   - component: {fileID: 2964301118207445671}
-  - component: {fileID: 1569105887354361003}
   m_Layer: 10
   m_Name: PlatformWood
   m_TagString: Untagged
@@ -131,7 +129,7 @@ Transform:
   m_Children:
   - {fileID: 1440002790722905144}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7349208843205512014
 SpriteRenderer:
@@ -185,18 +183,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1171324646075119784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6621784839114530319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4723def116204dd428fb30f05c55f600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2964301118207445671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -242,22 +228,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8486049, y: 0.35397586}
   m_EdgeRadius: 0
---- !u!114 &1569105887354361003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6621784839114530319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12f06373cfc4de6acb759e865ad85f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _startPoint: {x: 0, y: 0, z: 0}
-  _endPoint: {x: 0, y: 0, z: 0}
-  _moveDuration: 3
-  _moveDelay: 1
-  _isLoop: 1
-  _isFastMoveToStart: 0
-  _needToComeBack: 1

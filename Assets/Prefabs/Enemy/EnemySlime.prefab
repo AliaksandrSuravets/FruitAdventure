@@ -98,7 +98,7 @@ Transform:
   - {fileID: 8948090867094515495}
   - {fileID: 5034400980072119988}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1825884591381900274
 MonoBehaviour:
@@ -116,8 +116,8 @@ MonoBehaviour:
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 192
-  _groundCheckDistance: 0.51
-  _wallCheckDistance: 0.42
+  _groundCheckDistance: 0.66
+  _wallCheckDistance: 0.69
   _startCheckGround: {fileID: 5034400980072119988}
   _startCheckWall: {fileID: 8948090867094515495}
   _speed: 1
@@ -232,7 +232,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2222222, y: 0.8333333}
+    oldSize: {x: 2, y: 1.3636364}
     newSize: {x: 1.2222222, y: 0.8333333}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
