@@ -30,8 +30,10 @@ namespace FruitAdventure.UI
 
         private void Update()
         {
+
             _timerText.text = $"Время: {GameService.Instance.Timer:00}";
             _scoreText.text = $"Фруктов: {GameService.Instance.Score}";
+        
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {

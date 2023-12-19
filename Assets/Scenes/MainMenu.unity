@@ -4068,7 +4068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelButton: {fileID: 2897494192690406857, guid: e68d99d583e8f7845a3b8727244f85a9, type: 3}
   _levelButtonParent: {fileID: 553264389}
-  _levelOpen: 0001010100000000000000000000000000000000
+  _levelOpen: 00010000000000000000000000000000000000000000
 --- !u!4 &1014279125
 Transform:
   m_ObjectHideFlags: 0

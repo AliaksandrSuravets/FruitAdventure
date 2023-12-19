@@ -23,7 +23,7 @@ namespace FruitAdventure.Services
         {
             _levelOpen[1] = true;
             LoadNewGame();
-            for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
+            for (int i = 1; i < SceneManager.sceneCountInBuildSettings-1; i++)
             {
                 string sceneName = "Level" + i;
                 string sceneNameText = "Уровень " + i;
@@ -56,7 +56,7 @@ namespace FruitAdventure.Services
         private void LoadNewGame()
         {
             AudioService.Instance.PlaySFX(4);
-            for (int i = 2; i < SceneManager.sceneCountInBuildSettings; i++)
+            for (int i = 2; i < SceneManager.sceneCountInBuildSettings-1; i++)
             {
                 bool isUnlocked = PlayerPrefs.GetInt($"Level{i}Unlocked") == 1;
                 if (!isUnlocked)
