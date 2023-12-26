@@ -1,6 +1,8 @@
+using System;
 using FruitAdventure.PlayerFolder;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace FruitAdventure.Enemys
 {
@@ -129,7 +131,7 @@ namespace FruitAdventure.Enemys
                 Flip();
             }
         }
-
+        
         #endregion
     }
 }

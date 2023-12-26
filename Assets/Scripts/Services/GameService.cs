@@ -48,6 +48,11 @@ namespace FruitAdventure.Services
             Score = PlayerPrefs.GetInt("Score");
         }
 
+        public void SetTimerToZero()
+        {
+            Timer = 0; 
+        }
+        
         private void Update()
         {
             if (IsStartTime)

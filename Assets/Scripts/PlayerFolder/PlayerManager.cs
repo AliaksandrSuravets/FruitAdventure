@@ -52,6 +52,7 @@ namespace FruitAdventure.PlayerFolder
 
         public void RespawnPlayer()
         {
+            GameService.Instance.SetTimerToZero();
             if (CurrentPlayer == null)
             {
                 AudioService.Instance.PlaySFX(11);
